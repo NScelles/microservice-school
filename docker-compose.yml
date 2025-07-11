@@ -1,0 +1,75 @@
+services:
+
+  db:
+    image: mysql
+    restart: always
+    container_name: mysql
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=marie
+      - MYSQL_DATABASE=mydb
+    volumes:
+      - db_school:/var/lib/mysql
+    networks:
+      - school_network
+  
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    container_name: phpmyadmin
+    environment:
+      - PMA_HOST=db
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    networks:
+      - school_network
+
+  eureka:
+    build: eureka-server\
+    restart: always
+    container_name: eureka
+    ports:
+      - "8761:8761"
+    networks:
+      - school_network
+  gateway:
+    build: gateway\
+    restart: always
+    container_name: gateway
+    ports:
+      - "8085:8085"
+    networks:
+      - school_network
+  teacher:
+    build: teacher\
+    restart: always
+    container_name: teacher
+    networks:
+      - school_network
+    depends_on:
+      - db
+  student:
+    build: student\
+    restart: always
+    container_name: student
+    networks:
+      - school_network
+    depends_on:
+      - db
+  schoolclass:
+    build: school-class\
+    restart: always
+    container_name: schoolclass
+    networks:
+      - school_network
+    depends_on:
+      - db
+
+volumes:
+  db_school:
+
+networks:
+  school_network:
