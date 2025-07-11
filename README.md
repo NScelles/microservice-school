@@ -23,6 +23,12 @@ Chaque service est indépendant, expose sa propre API REST, et communique via HT
 
 ## 🚀 Lancement des services
 
+- 🐋 Pour démarrer l'appilcation faite si vous utilisé docker
+```bash
+  docker compose up -d
+```
+- Puis je vous laisse essayer les routes suivante avec l'adresse http://localhost:8085
+
 ### ⚙️ Prérequis
 - Java 21
 
