@@ -23,11 +23,6 @@ Chaque service est indépendant, expose sa propre API REST, et communique via HT
 
 ## 🚀 Lancement des services
 
-- 🐋 si vous utilisez docker pour démarrer l'appilcation faite
-```bash
-  docker compose up -d
-```
-- Puis je vous laisse essayer les routes suivante avec l'adresse http://localhost:8085
 
 ### ⚙️ Prérequis
 - Java 21
@@ -43,6 +38,13 @@ cd School
 - Veuillez démarrer tous les services via votre IDE (ex:Intellij IDEA).
 - Assurez-vous que tous les services soit connecté à la base de données dans le `application.properties`.
 - Assurez-vous que tous les services ont leur propre port défini dans `application.properties`.
+
+### 🐋 Docker
+
+```bash
+  docker compose up -d
+```
+- Puis je vous laisse essayer les routes suivante avec l'adresse http://localhost:8085
 
 ---
 
