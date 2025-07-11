@@ -68,7 +68,7 @@ Chaque microservice expose une API REST standard :
 
 ### 👩‍🎓 Student Service
 
-**Base URL** : `/students`
+**Base URL** : `/student`
 
 | Method | Endpoint       | Request Body                                      | Response |
 |--------|----------------|---------------------------------------------------|----------|
@@ -82,7 +82,7 @@ Chaque microservice expose une API REST standard :
 
 ### 🏫 Class Service
 
-**Base URL** : `/classes`
+**Base URL** : `/school-class`
 
 | Method | Endpoint       | Request Body                                | Response |
 |--------|----------------|---------------------------------------------|----------|
