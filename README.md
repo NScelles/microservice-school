@@ -23,7 +23,7 @@ Chaque service est indépendant, expose sa propre API REST, et communique via HT
 
 ## 🚀 Lancement des services
 
-- 🐋 Pour démarrer l'appilcation faite si vous utilisé docker
+- 🐋 si vous utilisez docker pour démarrer l'appilcation faite
 ```bash
   docker compose up -d
 ```
