@@ -44,7 +44,7 @@ cd School
 ```bash
   docker compose up -d
 ```
-- Puis je vous laisse essayer les routes suivante avec l'adresse http://localhost:8085
+- Puis je vous laisse essayer les routes suivante avec l'adresse http://localhost:8085 correspondant au port de la gateway
 
 ---
 
@@ -55,6 +55,12 @@ Chaque microservice expose une API REST standard :
 ---
 
 ### 👨‍🏫 Teacher Service
+
+- Entity Teacher:
+  - id : UUID
+  - first_name : String
+  - last_name : String
+  - biryhdate : LocalDate (format : yyyy-MM-dd)
 
 **Base URL** : `/teachers`
 
@@ -70,6 +76,12 @@ Chaque microservice expose une API REST standard :
 
 ### 👩‍🎓 Student Service
 
+- Entity Student:
+  - id : UUID
+  - first_name : String
+  - last_name : String
+  - biryhdate : LocalDate (format : yyyy-MM-dd)
+
 **Base URL** : `/student`
 
 | Method | Endpoint       | Request Body                                      | Response |
@@ -83,6 +95,11 @@ Chaque microservice expose une API REST standard :
 ---
 
 ### 🏫 Class Service
+
+- Entity Teacher:
+  - id : UUID
+  - students : List<UUID>
+  - teacher : UUID
 
 **Base URL** : `/school-class`
 
